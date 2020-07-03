@@ -8,7 +8,7 @@ file = Path(argv[1])
 def editor():
     with file.open('r') as f:
         text = f.read()
-    lines = len(text.split('\n'))
+    lines = min(50,len(text.split('\n')))
     return template('''
 <!DOCTYPE html>
 <html>
