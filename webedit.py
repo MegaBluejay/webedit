@@ -4,16 +4,6 @@ from pathlib import Path
 
 file = Path(argv[1])
 
-@get('/login')
-def login():
-    return '''
-        <form action="/login" method="post">
-            Username: <input name="username" type="text" />
-            Password: <input name="password" type="password" />
-            <input value="Login" type="submit" />
-        </form>
-    '''
-
 @get('/')
 def editor():
     with file.open('r') as f:
@@ -40,15 +30,5 @@ def edit():
     with file.open('w') as f:
         f.write(text)
     redirect('/')
-
-
-@post('/login')
-def do_login():
-    username = request.forms.get('username')
-    password = request.forms.get('password')
-    if username=='jay' and password=='mmm':
-        return '<p>You\'re in</p>'
-    return '<p>Login failed</p>'
-
 
 run(host='localhost',port=8080,debug=True)
