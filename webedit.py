@@ -6,6 +6,8 @@ file = Path(argv[1])
 
 @get('/')
 def editor():
+    if not file.exists():
+        file.touch()
     with file.open('r') as f:
         text = f.read()
     lines = min(50,len(text.split('\n')))
@@ -19,7 +21,7 @@ def editor():
             <input value="Save" type="submit" />
         </form>
         <br>
-        <textarea name="area" id="area" wrap="hard" rows="{{lines}}" cols="80" form="editor">{{text}}</textarea>
+        <textarea name="area" id="area" rows="{{lines}}" cols="100" form="editor">{{text}}</textarea>
     </body>
 </html>    
 ''', text=text, lines=lines)
