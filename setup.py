@@ -4,7 +4,7 @@ setup(
     name='webedit',
     version='0.1',
     packages=['webedit'],
-    url='',
+    url='https://github.com/MegaBluejay/webedit',
     license='',
     author='megabluejay',
     author_email='dmoiseev2011@gmail.com',
