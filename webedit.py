@@ -33,4 +33,4 @@ def edit():
         f.write(text)
     redirect('/')
 
-run(host='localhost',port=8080,debug=True)
+run(host='localhost',port=8080)
