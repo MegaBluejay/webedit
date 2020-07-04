@@ -1,7 +1,12 @@
 from datetime import datetime
 from cork import Cork
+from pathlib import Path
 
 password = 'mmm'
+
+confdir = Path('./authconf')
+if not confdir.exists():
+    confdir.mkdir()
 
 cork = Cork('authconf',initialize=True)
 
