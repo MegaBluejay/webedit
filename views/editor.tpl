@@ -18,5 +18,6 @@
             <button type="submit" id="submitbtn"><img src="/images/save.png" /></button>
         </form>
         <textarea name="editor" id="editor" rows="{{lines}}" cols="100" wrap="off" form="edform">{{text}}</textarea>
+        <a href="/logout">logout</a>
     </body>
 </html>

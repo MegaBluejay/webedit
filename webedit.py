@@ -34,6 +34,10 @@ def login():
     password = request.forms.password
     cork.login('admin',password, success_redirect='/',fail_redirect='/login')
 
+@get('/logout')
+def logout():
+    cork.logout(success_redirect='/login')
+
 @get('/')
 @auth()
 def editor():

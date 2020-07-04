@@ -1,7 +1,6 @@
 from datetime import datetime
 from cork import Cork
 
-username = 'admin'
 password = 'mmm'
 
 cork = Cork('authconf',initialize=True)
@@ -10,6 +9,7 @@ cork._store.roles['admin'] = 100
 cork._store.save_roles()
 
 tstamp = str(datetime.utcnow())
+username = 'admin'
 cork._store.users[username] = {
     'role': 'admin',
     'hash': cork._hash(username,password),
