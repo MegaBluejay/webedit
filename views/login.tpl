@@ -1,9 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+    <head>
+        <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <style>
+            #loginform {
+                display: flex;
+                height: 30px;
+            }
+            input[type=text] {
+                width: 100%;
+            }
+        </style>
+    </head>
     <body>
-        <form action="/login" method="post" id="loginform">
-            <input type="text" name="password" placeholder="password" />
-            <button type="submit">Login</button>
-        </form>
+        <div class="row-fluid">
+            <div class="span4 offset4">
+                <form action="/login" method="post" id="loginform">
+                    <input type="text" name="password" placeholder="password" />
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+        <script src="/js/bootstrap.min.js"></script>
     </body>
 </html>

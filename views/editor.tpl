@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
         <style>
             #editor {
-                width: 100%;
-                height: 100%;
+                width: 99vw;
+                height: 85vh;
                 resize: none;
             }
             #submitbtn {
@@ -19,5 +20,6 @@
         </form>
         <textarea name="editor" id="editor" rows="{{lines}}" cols="100" wrap="off" form="edform">{{text}}</textarea>
         <a href="/logout">logout</a>
+        <script src="/js/bootstrap.min.js"></script>
     </body>
 </html>

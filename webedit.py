@@ -55,7 +55,15 @@ def edit():
 
 @get('/images/<filename:re:.*\.png>')
 def image(filename):
-    return static_file(filename,root='./res', mimetype='image/png')
+    return static_file(filename,root='./res/img', mimetype='image/png')
+
+@get('/js/<filename:re:.*\.js>')
+def script(filename):
+    return static_file(filename, root='./res/js')
+
+@get('/css/<filename:re:.*\.css>')
+def style(filename):
+    return static_file(filename,root='./res/css')
 
 
 if __name__ == '__main__':
