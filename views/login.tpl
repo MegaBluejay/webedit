@@ -7,7 +7,7 @@
                 display: flex;
                 height: 30px;
             }
-            input[type=text] {
+            input[type=password] {
                 width: 100%;
             }
         </style>
@@ -16,7 +16,7 @@
         <div class="row-fluid">
             <div class="span4 offset4">
                 <form action="/login" method="post" id="loginform">
-                    <input type="text" name="password" placeholder="password" />
+                    <input type="password" name="password" placeholder="password" />
                     <button type="submit">Login</button>
                 </form>
             </div>
